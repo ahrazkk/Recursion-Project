@@ -1,0 +1,68 @@
+Description:
+f
+For part 2, I believe I achieved everything I was asked to do plus a little more for fun; I added a few extra things as well, like not allowing the number of the disk to be below one since if it was 0, it wouldn't do anything and if it was a negative number it went on for an infinite loop. Some other things were mainly just cosmetic. I used a lot of if statements since i found them to be the easiest.
+
+
+
+
+
+
+-----------------------------------------------------------
+
+Question:
+Suppose that towers(5, 2, 3) is invoked.
+1. How will the first recursive call to towers() be invoked? Answer this
+question in the form: towers(x, y, z) where you give the actual values to the
+three parameters.
+2. How many recursive calls to towers() will be made before this first recursive
+call actually returns to the initial invocation?
+3. Once towers(5, 2, 3) has invoked its first recursive call to towers() and this invocation has returned, what will be printed to stdout? (i.e. What actual move will be made by towers(5, 2, 3) ?)
+
+4. How will the second recursive call to towers() be invoked? Answer this
+question in the form: towers(x, y, z) where you give the actual values to the
+three parameters
+---------------------------------------------------------------------
+
+1)
+The first recursive call to towers() would be towers(4, 2, 1), where n becomes n-1, from remains the same, and dest becomes 6 - from - dest which is equal to1 being the spare tower in this case.
+
+2)
+i beleive it would take 31 recursive calls will be made before the call actually returns to the initial invocation, this is because of 2 reasons, 1. for the towers of hanoi problem, to calculate how many steps are made you use the formula 2^n -1,  with n being the number of disks in this case, that formula adds up to 31. secondly, if you use the code "Ttest 5 2 3 >file Redirect" which is just sending all the tower numbers to a new file called fileRedirect, and then use "cat fileRedirect -n" it would give you the amount of ressive calls numbered with the last being on 31.
+
+3)
+The actual move that towers(5, 2, 3) will make is:
+ 
+2 3
+2 1
+3 1
+2 3
+1 2
+1 3
+2 3
+2 1
+3 1
+3 2
+1 2
+3 1
+2 3
+2 1
+3 1
+2 3
+1 2
+1 3
+2 3
+1 2
+3 1
+3 2
+1 2 
+1 3
+2 3
+2 1
+3 1
+2 3
+1 2
+1 3
+2 3
+
+4) the second recursive call to towers() that will be invoked is (3,2,3) 
+
